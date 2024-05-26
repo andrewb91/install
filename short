@@ -1,1 +1,2 @@
+pacman -S -needed xorg lightdm lightdm-gtk-greeter timeshift gedit pcmanfm firefox openbox obconf xfce4-terminal
 
