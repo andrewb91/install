@@ -7,13 +7,12 @@ sudo pacman -D --asexplicit base base-devel grub linux-lts linux-lts-headers lin
 su -
 pacman -Qttdq | pacman -Rns -
 
-alsa-utils arandr i3-wm  i3lock-fancy-git i3status autotiling bluedevil blueman bluetuith bluez bluez-hid2hci bluez-utils brave-bin brightnessctl btop cairo cmake conky cups dialog dkms dosfstools efibootmgr engrampa exfat-utils expac feh firefox fuse2 fuse3 gedit gimp 
-
+acpi acpilight alsa-utils arandr i3-wm  i3lock-fancy-git i3status autotiling bluedevil blueman bluetuith bluez bluez-hid2hci bluez-utils brave-bin brightnessctl btop cairo cmake conky cups dialog dkms dosfstools efibootmgr engrampa exfat-utils expac feh firefox fuse2 fuse3 gedit gimp gnome-keyring gnome-mahjongg gufw gvfs gvfs-gphoto2 gvfs-smb haveged hplip ifuse imlib lib32-mesa libimobiledevice libreoffice libxnvctrl lutris lvm2 lxappearance man-db man-pages mc mesa mpd mpv mtools ncdu neovim network-manager-applet networkmanager networkmanager-openvpn ntfs-3g numlockx okular os-prober pacman-contrib pamixer pandoc-bin pavucontrol pavucontrol-qt pcmanfm picom playerctl polybar ponymix pulseaudio-bluetooth pulseaudio-nextsink redshift ripgrep rofi rsync samba scrot siji-git slimbookbattery steam sxhkd system-config-printer timeshift tldr tlp tlp-rdw tmux transmission-gtk unarchiver vlc vulkan-radeon wine wine-gecko wine-mono winetricks wireless_tools wmctrl wpa_supplicant xdg-user-dirs xdg-utils xf86-video-vesa xorg xsel yay yay-debug
 
 All installed packages:
-acpi acpilight  adwaita-icon-theme arc-gtk-theme arc-icon-theme bc binddowngrade 
+adwaita-icon-theme arc-gtk-theme arc-icon-theme bc binddowngrade 
 
-github-desktop gnome-keyring gnome-mahjongg gparted gptfdisk gucharmap gufw gvfs gvfs-gphoto2 gvfs-smb haveged hplip i3blocks ifuse imlib lib32-mesa libimobiledevice libreoffice libxnvctrl lutris lvm2 lxappearance man-db man-pages materia-gtk-theme mc mesa mpd mpv mtools ncdu neovim network-manager-applet networkmanager networkmanager-openvpn ntfs-3g numlockx okular  openmw openssh openvpn os-prober otf-font-awesome pacman-contrib pamixer pandoc-bin papirus-icon-theme pavucontrol pavucontrol-qt pcmanfm picom playerctl polybar ponymix pulseaudio-bluetooth pulseaudio-nextsink redshift ripgrep rofi rsync samba sane-airscan scrot siji-git slimbookbattery steam sxhkd system-config-printer terminus-font thunderbird timeshift tldr tlp tlp-rdw tmux transmission-gtk ttf-dejavu ttf-font-awesome ttf-jetbrains-mono-nerd ttf-liberation ttf-ms-fonts ttf-ubuntu-font-family ttf-unifont unarchiver vlc vulkan-radeon wine wine-gecko wine-mono winetricks wireless_tools wmctrl wpa_supplicant xdg-user-dirs xdg-utils xf86-video-vesa xorg xsel yay yay-debug
+github-desktop gparted gptfdisk gucharmap i3blocks materia-gtk-theme openmw openssh openvpn otf-font-awesome papirus-icon-theme sane-airscan terminus-font thunderbirdttf-dejavu ttf-font-awesome ttf-jetbrains-mono-nerd ttf-liberation ttf-ms-fonts ttf-ubuntu-font-family ttf-unifont 
 
 bibletime pcsx2-avx-git pycharm-community-edition ranger ttf-weather-icons 
 opendrop-git light 
