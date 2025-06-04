@@ -1,18 +1,43 @@
 FIRST!!!
-Remove chaotic-aur from /etc/pacman.conf
+
+BACK UP SYSTEM!!! & Save Home Directory
+
+Remove chaotic-aur from /etc/pacman.conf but not before you're ready to re-install.
 
 sudo systemctl disable lightdm.service #(or whichever displaymanager is installed)
+
 sudo pacman -D --asdeps $(pacman -Qqe)
-sudo pacman -D --asexplicit base base-devel grub linux-lts linux-lts-headers linux-firmware git vim amd-ucode terminator xorg 
+
+sudo pacman -D --asexplicit amd-ucode base base-devel git grub linux-firmware linux-lts linux-lts-headers network-manager networkmanager networkmanager-applet terminator vim yay
+
 su -
+
 pacman -Qttdq | pacman -Rns -
 
-acpi acpilight alsa-utils arandr i3-wm  i3lock-fancy-git i3status autotiling bluedevil blueman bluetuith bluez bluez-hid2hci bluez-utils brave-bin brightnessctl btop cairo cmake conky cups dialog dkms dosfstools efibootmgr engrampa exfat-utils expac feh firefox fuse2 fuse3 gedit gimp gnome-keyring gnome-mahjongg gufw gvfs gvfs-gphoto2 gvfs-smb haveged hplip ifuse imlib lib32-mesa libimobiledevice libreoffice libxnvctrl lutris lvm2 lxappearance man-db man-pages mc mesa mpd mpv mtools ncdu neovim network-manager-applet networkmanager networkmanager-openvpn ntfs-3g numlockx okular os-prober pacman-contrib pamixer pandoc-bin pavucontrol pavucontrol-qt pcmanfm picom playerctl polybar ponymix pulseaudio-bluetooth pulseaudio-nextsink redshift ripgrep rofi rsync samba scrot siji-git slimbookbattery steam sxhkd system-config-printer timeshift tldr tlp tlp-rdw tmux transmission-gtk unarchiver vlc vulkan-radeon wine wine-gecko wine-mono winetricks wireless_tools wmctrl wpa_supplicant xdg-user-dirs xdg-utils xf86-video-vesa xorg xsel yay yay-debug
+
+acpi acpilight alsa-utils arandr i3-wm  i3lock-fancy-git i3status autotiling bluedevil blueman bluetuith bluez bluez-hid2hci bluez-utils brightnessctl btop cairo cmake conky cups dialog dkms dosfstools efibootmgr engrampa exfat-utils expac feh firefox fuse2 fuse3 gedit gimp gnome-keyring gnome-mahjongg gufw gvfs gvfs-gphoto2 gvfs-smb haveged hplip ifuse imlib lib32-mesa libimobiledevice libreoffice libxnvctrl lutris lvm2 lxappearance man-db man-pages mc mesa mpd mpv mtools ncdu neovim  ntfs-3g numlockx okular os-prober pacman-contrib pamixer pandoc-bin pavucontrol pavucontrol-qt pcmanfm picom playerctl polybar ponymix pulseaudio-bluetooth redshift ripgrep rofi rsync samba scrot siji-git slimbookbattery steam sxhkd system-config-printer tlp tlp-rdw tmux transmission-gtk unarchiver vlc vulkan-radeon wine wine-gecko wine-mono winetricks wireless_tools wmctrl wpa_supplicant xdg-user-dirs xdg-utils xf86-video-vesa xorg xsel xorg yay yay-debug
+
+openvpn networkmanager-openvpn
+
+# Install with yay -S (as regular user)
+tldr
+pulseaudio-nextsink
+i3lock-fancy-git
+timeshift
+brave-bin 
+ttf-ms-fonts
+
+signal
+uswsusp-git
+ntfd-bin
+protonmail-bridge
+spotify
+zoom
+
+
 
 All installed packages:
-adwaita-icon-theme arc-gtk-theme arc-icon-theme bc binddowngrade 
-
-github-desktop gparted gptfdisk gucharmap i3blocks materia-gtk-theme openmw openssh openvpn otf-font-awesome papirus-icon-theme sane-airscan terminus-font thunderbirdttf-dejavu ttf-font-awesome ttf-jetbrains-mono-nerd ttf-liberation ttf-ms-fonts ttf-ubuntu-font-family ttf-unifont 
+adwaita-icon-theme arc-gtk-theme arc-icon-theme bc binddowngrade github-desktop gparted gptfdisk gucharmap i3blocks materia-gtk-theme openmw openssh openvpn otf-font-awesome papirus-icon-theme sane-airscan terminus-font thunderbirdttf-dejavu ttf-font-awesome ttf-jetbrains-mono-nerd ttf-liberation ttf-ms-fonts ttf-ubuntu-font-family ttf-unifont 
 
 bibletime pcsx2-avx-git pycharm-community-edition ranger ttf-weather-icons 
 opendrop-git light 
