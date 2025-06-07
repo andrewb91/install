@@ -1,3 +1,6 @@
 #!/bin/bash
 
 pacman -S acpi acpilight alsa-utils arandr i3-wm  i3lock-fancy-git i3status autotiling bluedevil blueman bluetuith bluez bluez-hid2hci bluez-utils brightnessctl btop cairo cmake conky cups dialog dkms dosfstools efibootmgr engrampa exfat-utils expac feh firefox fuse2 fuse3 gedit gimp gnome-keyring gnome-mahjongg gufw gvfs gvfs-gphoto2 gvfs-smb haveged hplip ifuse imlib lib32-mesa libimobiledevice libreoffice libxnvctrl lutris lxappearance man-db man-pages mc mesa mpd mpv mtools ncdu neovim  ntfs-3g numlockx okular os-prober pacman-contrib pamixer pandoc-bin pavucontrol pavucontrol-qt pcmanfm picom playerctl polybar ponymix pulseaudio-bluetooth redshift ripgrep rofi rsync samba scrot siji-git slimbookbattery steam sxhkd system-config-printer tlp tlp-rdw tmux transmission-gtk unarchiver vlc vulkan-radeon wine wine-gecko wine-mono winetricks wireless_tools wmctrl wpa_supplicant xdg-user-dirs xdg-utils xf86-video-vesa xorg xsel xorg
+
+
+yay -S acpilight bluetuith imlib pandoc-bin ponymix rsync siji-git slimbook-battery wpa_supplicant xdg-utils
