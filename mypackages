@@ -1,8 +1,33 @@
 #!/bin/bash
 
-pacman -S grub efibootmgr networkmanager network-manager-applet wireless_tools wpa_supplicant dialog os-prober mtools dosfstools base-devel git bluez bluez-utils pulseaudio-bluetooth cups xdg-utils xdg-user-dirs openssh xorg i3-wm terminator firefox polybar rofi numlockx sxhkd 
+pacstrap /mnt base linux-lts linux-lts-headers linux-firmware vim amd-ucode lvm2
 
-#pacman -S acpi alsa-utils arandr i3-wm i3status autotilng bluedevil blueman bluetuith bluez bluez-hid2hci bluez-utils brightnessctl btop cairo cmake conky cups dialog dkms dosfstools efibootmgr engrampa exfat-utils expac feh firefox fuse2 fuse3 gedit gimp gnome-keyring gnome-mahjongg gufw gvfs gvfs-gphoto2 gvfs-smb haveged hplip ifuse imlib lib32-mesa libimobiledevice libreoffice libxnvctrl lutris lxappearance man-db man-pages mc mesa mpd mpv mtools ncdu neovim  ntfs-3g numlockx okular os-prober pacman-contrib pamixer pandoc-bin pavucontrol pavucontrol-qt pcmanfm picom playerctl polybar ponymix pulseaudio-bluetooth redshift ripgrep rofi rsync samba scrot siji-git slimbookbattery steam sxhkd system-config-printer tlp tlp-rdw tmux transmission-gtk unarchiver vlc vulkan-radeon wine wine-gecko wine-mono winetricks wireless_tools wmctrl wpa_supplicant xdg-user-dirs xdg-utils xf86-video-vesa xorg xsel xorg
+ln -sf /usr/share/zoneinfo/America/Los_Angeles /etc/localtime
+hwclock --systohc
+sed -i '178s/.//' /etc/locale.gen
+locale-gen
+echo "LANG=en_US.UTF-8" >> /etc/locale.conf
+echo "mobile" >> /etc/hostname
+echo "127.0.0.1 localhost" >> /etc/hosts
+echo "::1       localhost" >> /etc/hosts
+echo "127.0.1.1 arch.localdomain mobile" >> /etc/hosts
 
 
-yay -S acpilight bluetuith imlib pandoc-bin ponymix rsync siji-git slimbook-battery wpa_supplicant xdg-utils
+useradd -m drew
+echo "drew ALL=(ALL) ALL" >> /etc/sudoers.d/drew
+
+#pacman -S grub efibootmgr networkmanager network-manager-applet wireless_tools wpa_supplicant dialog os-prober mtools dosfstools base-devel git bluez bluez-utils pulseaudio-bluetooth cups xdg-utils xdg-user-dirs openssh xorg i3-wm terminator firefox polybar rofi numlockx sxhkd xf86-video-amdgpu terminal-fonts awesome-terminal-fonts ttf-font-awesome scrot vlc
+
+systemctl enable NetworkManager
+systemctl enable bluetooth
+systemctl enable cups.service
+
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB 
+#change the directory to /boot/efi is you mounted the EFI partition at /boot/efi
+
+grub-mkconfig -o /boot/grub/grub.cfg
+
+#pacman -S acpi alsa-utils arandr i3-wm i3status autotilng bluedevil blueman bluez bluez-hid2hci bluez-utils brightnessctl btop cairo cmake conky cups dialog dkms dosfstools dunst engrampa exfat-utils expac feh firefox fuse2 fuse3 gedit gimp gnome-keyring gnome-mahjongg gufw gvfs gvfs-gphoto2 gvfs-smb haveged hplip ifuse lib32-mesa libimobiledevice libreoffice libxnvctrl lutris lxappearance man-db man-pages mesa mpd mpv mtools ncdu neovim  ntfs-3g okular os-prober pacman-contrib pamixer pavucontrol pcmanfm picom playerctl pulseaudio-bluetooth redshift ripgrep samba system-config-printer tlp tlp-rdw tmux transmission-gtk unarchiver vlc vulkan-radeon wine wine-gecko wine-mono winetricks wireless_tools wmctrl xf86-video-vesa xsel timeshift xbacklight
+
+
+#yay -S brave-browser bluetuith imlib pandoc-bin ponymix siji-git slimbook-battery xdg-utils
