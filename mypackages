@@ -16,7 +16,7 @@ echo "127.0.1.1 arch.localdomain mobile" >> /etc/hosts
 useradd -m drew
 echo "drew ALL=(ALL) ALL" >> /etc/sudoers.d/drew
 
-#pacman -S grub efibootmgr networkmanager network-manager-applet wireless_tools wpa_supplicant dialog os-prober mtools dosfstools base-devel git bluez bluez-utils pulseaudio-bluetooth cups xdg-utils xdg-user-dirs openssh xorg i3-wm terminator firefox polybar rofi numlockx sxhkd xf86-video-amdgpu terminal-fonts awesome-terminal-fonts ttf-font-awesome scrot vlc
+#pacman -S grub efibootmgr networkmanager network-manager-applet wireless_tools wpa_supplicant dialog os-prober mtools dosfstools base-devel git bluez bluez-utils cups xdg-utils xdg-user-dirs openssh xorg i3-wm terminator firefox polybar rofi numlockx sxhkd xf86-video-amdgpu terminal-fonts awesome-terminal-fonts ttf-font-awesome scrot vlc
 
 systemctl enable NetworkManager
 systemctl enable bluetooth
@@ -27,7 +27,9 @@ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
-#pacman -S acpi alsa-utils arandr i3-wm i3status autotilng bluedevil blueman bluez bluez-hid2hci bluez-utils brightnessctl btop cairo cmake conky cups dialog dkms dosfstools dunst engrampa exfat-utils expac feh firefox fuse2 fuse3 gedit gimp gnome-keyring gnome-mahjongg gufw gvfs gvfs-gphoto2 gvfs-smb haveged hplip ifuse lib32-mesa libimobiledevice libreoffice libxnvctrl lutris lxappearance man-db man-pages mesa mpd mpv mtools ncdu neovim  ntfs-3g okular os-prober pacman-contrib pamixer pavucontrol pcmanfm picom playerctl pulseaudio-bluetooth redshift ripgrep samba system-config-printer tlp tlp-rdw tmux transmission-gtk unarchiver vlc vulkan-radeon wine wine-gecko wine-mono winetricks wireless_tools wmctrl xf86-video-vesa xsel timeshift xbacklight
+#pacman -S arandr autotilng brightnessctl btop cairo cmake conky dunst engrampa feh firefox gedit gimp gnome-keyring gnome-mahjongg gufw gvfs gvfs-gphoto2 gvfs-smb haveged hplip lib32-mesa libimobiledevice libreoffice libxnvctrl lutris lxappearance man-db man-pages mesa mpd mpv neovim okular pacman-contrib pcmanfm picom redshift ripgrep samba system-config-printer tlp tlp-rdw tmux transmission-gtk unarchiver vlc vulkan-radeon wine wine-gecko wine-mono winetricks xf86-video-vesa timeshift
 
+#yay -S brave-browser bluetuith imlib pandoc-bin ponymix siji-git slimbook-battery 
 
-#yay -S brave-browser bluetuith imlib pandoc-bin ponymix siji-git slimbook-battery xdg-utils
+xdg-utils acpi alsa-utils bluedevil blueman bluez bluez-hid2hci bluez-utils cups dialog dkms dosfstools exfat-utils expac fuse2 fuse3 wireless_tools wmctrl xbacklight mtools ncdu os-prober xsel pulseaudio-bluetooth ntfs-3g ifuse pavucontrol pamixer playerctl 
+
