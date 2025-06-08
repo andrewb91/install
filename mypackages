@@ -27,7 +27,7 @@ grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 
 grub-mkconfig -o /boot/grub/grub.cfg
 
-#pacman -S arandr autotilng brightnessctl btop cairo cmake conky dunst engrampa feh firefox gedit gimp gnome-keyring gnome-mahjongg gufw gvfs gvfs-gphoto2 gvfs-smb haveged hplip lib32-mesa libimobiledevice libreoffice libxnvctrl lutris lxappearance man-db man-pages mesa mpd mpv neovim okular pacman-contrib pcmanfm picom redshift ripgrep samba system-config-printer tlp tlp-rdw tmux transmission-gtk unarchiver vlc vulkan-radeon wine wine-gecko wine-mono winetricks xf86-video-vesa timeshift
+#pacman -S -- as-needed arandr autotilng brightnessctl btop cairo cmake conky dunst engrampa feh firefox gedit gimp gnome-keyring gnome-mahjongg gufw gvfs gvfs-gphoto2 gvfs-smb haveged hplip lib32-mesa libimobiledevice libreoffice libxnvctrl lutris lxappearance man-db man-pages mesa mpd mpv neovim okular pacman-contrib pcmanfm picom redshift ripgrep samba system-config-printer tlp tlp-rdw tmux transmission-gtk unarchiver vlc vulkan-radeon wine wine-gecko wine-mono winetricks xf86-video-vesa timeshift
 
 #yay -S brave-browser bluetuith imlib pandoc-bin ponymix siji-git slimbook-battery 
 
