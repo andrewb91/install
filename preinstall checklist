@@ -1,0 +1,23 @@
+pre-install:
+
+pacman -S git vim 
+
+
+ctrl+d to increase font size
+
+get lts kernel
+
+echo $HISTSIZE
+If you're getting a low number like 500 or so, make Bash's history unlimited with the following :
+
+HISTSIZE=-1; HISTFILESIZE=-1
+Before rebooting:
+
+git clone https://github.com/andrewb91/install
+cd install
+chmod +x packages.sh
+./packages.sh
+
+Just before every reboot, copy your /root/.bash_history file to a USB stick (or anywhere that will still be there after a reboot or shutdown). Keep doing this until the installation is completely finished.
+If after the first reboot you log in with a regular user account and sudo the commands, you should copy ~/.bash_history into safety from now on. Again, just before each reboot, and until the installation is completely finished.
+Also copy .bash_history after the last command of the whole installation.
