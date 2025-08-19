@@ -1,5 +1,16 @@
 pre-install:
 
+Open /etc/pacman.conf file in your preferred editor:
+sudo vim /etc/pacman.conf
+
+Find the following line and uncomment it:
+ParallelDownloads = 5
+Also unmark both;
+
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+
+
 pacman -S git vim 
 
 
