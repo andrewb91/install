@@ -1,7 +1,13 @@
 pre-install:
 
-Open /etc/pacman.conf file in your preferred editor:
-sudo vim /etc/pacman.conf
+ctrl+d to increase font size
+
+pacman -Syy
+
+pacman -S git vim
+
+Open /etc/pacman.conf 
+vi /etc/pacman.conf
 
 Find the following line and uncomment it:
 ParallelDownloads = 5
@@ -10,13 +16,9 @@ Also unmark both;
 [multilib]
 Include = /etc/pacman.d/mirrorlist
 
+Save and run Pacman-Syy
 
-pacman -S git vim 
 
-
-ctrl+d to increase font size
-
-get lts kernel
 
 echo $HISTSIZE
 If you're getting a low number like 500 or so, make Bash's history unlimited with the following :
@@ -32,3 +34,23 @@ chmod +x packages.sh
 Just before every reboot, copy your /root/.bash_history file to a USB stick (or anywhere that will still be there after a reboot or shutdown). Keep doing this until the installation is completely finished.
 If after the first reboot you log in with a regular user account and sudo the commands, you should copy ~/.bash_history into safety from now on. Again, just before each reboot, and until the installation is completely finished.
 Also copy .bash_history after the last command of the whole installation.
+
+archinstall
+
+LVM + encryption
+
+ext4
+
+/boot 512M
+/ 50GB
+/home 10GB
+/swap 32GB
+/Files 90%FREE
+
+Network Manager
+grub
+install lts and zen kernels
+
+
+# Yay Install:
+yay -S i3lock-fancy-git ttf-ms-fonts rofi-power-menu neovim-git uswsusp-git
